@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-size: 10px;
+  --white: #f6f9fd;
+  --pale-aqua: #b8d3dd;
+  --japanese-indigo: #1e4552;
+  --moonstone-blue: #77a8b9;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: 'sidebar main';
+  width: 100vw;
+  height: 100vh;
+  font-size: 3rem;
+}
+
+#main {
+  grid-area: main;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+#new-message {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-left: 0;
+  height: 100px;
+  border-top: 2px solid var(--moonstone-blue, #77a8b9);
+}
+
+#new-message textarea {
+  font-size: 2rem;
+  width: 100%;
+  height: 100%;
+  color: var(--japanese-indigo, #1e4552);
+  background-color: var(--white);
+  padding: 10px;
+  border: 0;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+#messages-list {
+  color: var(--japanese-indigo, #1e4552);
+  padding: 10px;
+}
+
+#sidebar {
+  color: var(--white, #f6f9fd);
+  background-color: var(--japanese-indigo, #1e4552);
+  grid-area: sidebar;
+  padding: 10px 0 0 10px;
+  border-right: 2px solid var(--moonstone-blue, #77a8b9);
+  height: 100%;
+  font-family: 'Lobster', cursive;
+}
